@@ -23,7 +23,7 @@ Complex::Complex(double r, double i) : real(r), imag(i) {
 Complex::~Complex() {
 }
 
-// TODO(4): 复数相加
+// TODO(4): 复数相加,分别相加后构造新对象返回，a，b保持原值
 Complex Complex::operator+(const Complex& other) const {
     return Complex(real + other.real,imag + other.imag);
 }
@@ -33,7 +33,7 @@ Complex Complex::operator-(const Complex& other) const {
    return Complex(real - other.real,imag - other.imag);
 }
 
-// TODO(6): 按约定格式打印
+// TODO(6): 按约定格式打印，负号交给“-”处理
 void Complex::print() const {
     if (imag >= 0) {
         cout << real << " + " << imag << "i" << endl;
